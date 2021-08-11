@@ -24,6 +24,7 @@ header {
   justify-content: center;
   color: #353535;
   background: #EAEAEA;
+  font-weight: 600;
   margin-left: -2rem;
 }
 
@@ -60,4 +61,57 @@ header {
   font-size: 15px;
   font-family: roboto;
   box-shadow: 0 5px 0.7rem rgba(0, 0, 0, 0.3);
+}
+
+.functioning {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.functioning h2 {
+  align-self: flex-start;
+  margin-left: 20px;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #F6F6F6;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  margin: 10px 0;
+}
+
+.step__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 25px;
+  width: 25px;
+  border-radius: 50px;
+  background: #9356dc;
+  position: absolute;
+  left: -.75rem;
+}
+
+.step i {
+  color: grey;
+  padding: 25px;
+}
+
+.restaurants {
+  display: grid;
+  grid-template-columns: repeat(1fr, 2);
+  grid-template-columns: repeat(1fr, 2);
+  row-gap: 2rem;
+  column-gap: 2rem;
+}
+
+.restaurants img {
+  object-fit: cover;
 }
