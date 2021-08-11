@@ -1,25 +1,63 @@
+@font-face {
+  font-family: roboto;
+  src: url(fonts/roboto/Roboto-Medium.ttf);
+}
+
 body {
+  font-family: roboto;
   width: 100vw;
   margin: 0;
 }
 
 header {
-  position: relative;
   display: flex;
+  align-items: center;
   justify-content: center;
+  position: relative;
   padding: 20px 0px;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 .location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #353535;
   background: #EAEAEA;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-left: -2rem;
 }
 
 .location i {
   padding: 0.8rem;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 25px;
+  background: #F6F6F6;
+}
+
+.hero h2 {
+  text-align: center;
+}
+
+.hero p {
+  text-align: center;
+  margin-top: 0;
+  font-size: 17px;
+}
+
+.hero button {
+  color: white;
+  background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  border: none;
+  padding: 17px;
+  margin: 10px 0 25px 0;
+  border-radius: 50px;
+  font-size: 15px;
+  font-family: roboto;
+  box-shadow: 0 5px 0.7rem rgba(0, 0, 0, 0.3);
 }

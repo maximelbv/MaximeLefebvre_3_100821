@@ -1,25 +1,66 @@
+@font-face {
+    font-family: roboto;
+    src: url(fonts/roboto/Roboto-Medium.ttf);
+}
+
 $grey: #353535;
 $bg_color: #F6F6F6;
 
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin button {
+    color: white;
+    background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    border: none;
+    padding: 17px;
+    margin: 10px 0 25px 0;
+    border-radius: 50px;
+    font-size: 15px;
+    font-family: roboto;
+    box-shadow: 0 5px 0.7rem rgba($color: #000000, $alpha: 0.3);
+}
+
+
+
 body {
+    font-family: roboto;
     width: 100vw;
     margin: 0;
 }
 
 header {
+    @include flexCenter;
     position: relative;
-    display: flex;
-    justify-content: center;
     padding: 20px 0px;
     box-shadow: 0 0 0.5rem rgba($color: #000000, $alpha: 0.3);
 }
 
 .location {
+    @include flexCenter;
     color: $grey;
     background: #EAEAEA;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-left: -2rem;
     & i {padding: 0.8rem;}
+}
+
+.hero {
+    @include flexCenter;
+    flex-direction: column;
+    padding: 25px;
+    background: $bg_color;
+    & h2 {
+        text-align: center;
+    }
+    & p {
+        text-align: center;
+        margin-top: 0;
+        font-size: 17px;
+    }
+    & button {
+        @include button;
+    }
 }
