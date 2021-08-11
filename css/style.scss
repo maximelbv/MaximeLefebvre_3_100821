@@ -1,11 +1,25 @@
 $grey: #353535;
+$bg_color: #F6F6F6;
 
 body {
+    width: 100vw;
     margin: 0;
 }
 
 header {
+    position: relative;
     display: flex;
     justify-content: center;
     padding: 20px 0px;
+    box-shadow: 0 0 0.5rem rgba($color: #000000, $alpha: 0.3);
+}
+
+.location {
+    color: $grey;
+    background: #EAEAEA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -2rem;
+    & i {padding: 0.8rem;}
 }

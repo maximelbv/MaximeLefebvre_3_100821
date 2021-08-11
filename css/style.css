@@ -1,9 +1,25 @@
 body {
+  width: 100vw;
   margin: 0;
 }
 
 header {
+  position: relative;
   display: flex;
   justify-content: center;
   padding: 20px 0px;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.location {
+  color: #353535;
+  background: #EAEAEA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -2rem;
+}
+
+.location i {
+  padding: 0.8rem;
 }
