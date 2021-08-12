@@ -28,6 +28,18 @@ main {
   align-items: center;
 }
 
+button {
+  color: white;
+  background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  border: none;
+  padding: 17px;
+  margin: 10px 0 25px 0;
+  border-radius: 50px;
+  font-size: 15px;
+  font-family: roboto;
+  box-shadow: 0 5px 0.7rem rgba(59, 59, 59, 0.3);
+}
+
 .location {
   width: 100%;
   display: flex;
@@ -51,27 +63,15 @@ main {
   background: #F6F6F6;
 }
 
-.hero h3 {
+.hero__title {
   font-size: 25px;
   text-align: center;
 }
 
-.hero p {
+.hero__text {
   text-align: center;
   margin-top: 0;
   font-size: 17px;
-}
-
-.hero button {
-  color: white;
-  background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-  border: none;
-  padding: 17px;
-  margin: 10px 0 25px 0;
-  border-radius: 50px;
-  font-size: 15px;
-  font-family: roboto;
-  box-shadow: 0 5px 0.7rem rgba(59, 59, 59, 0.3);
 }
 
 .functioning {
@@ -85,7 +85,7 @@ main {
   padding-bottom: 50px;
 }
 
-.functioning h2 {
+.functioning__title {
   align-self: flex-start;
   width: 100%;
 }
@@ -139,7 +139,7 @@ main {
   column-gap: 2rem;
 }
 
-.list h2 {
+.list__title {
   grid-column: 1 / -1;
   align-self: flex-start;
 }

@@ -37,6 +37,8 @@ body {
     font-family: roboto;
 }
 
+
+
 header {
     @include flexCenter;
     position: relative;
@@ -48,6 +50,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+button {
+    @include button;
 }
 
 .location {
@@ -65,17 +71,14 @@ main {
     flex-direction: column;
     // padding: 25px;
     background: $bg_color;
-    & h3 {
+    &__title {
         font-size: 25px;
         text-align: center;
     }
-    & p {
+    &__text {
         text-align: center;
         margin-top: 0;
         font-size: 17px;
-    }
-    & button {
-        @include button;
     }
 }
 
@@ -86,7 +89,7 @@ main {
     width: 90%;
     max-width: 1440px;
     padding-bottom: 50px;
-    & h2 {
+    &__title {
         align-self: flex-start;
         width: 100%;
     }
@@ -134,7 +137,7 @@ main {
     grid-template-columns: 1fr 1fr;
     row-gap: 2rem;
     column-gap: 2rem;
-    & h2 {
+    &__title {
         grid-column: 1 / -1;
         align-self: flex-start;
     }
