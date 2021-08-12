@@ -163,6 +163,7 @@ main {
         object-fit: cover;
     }
     &__info {
+        color: black;
         padding: 0 25px;
         @include flexCenter;
         justify-content: space-between;

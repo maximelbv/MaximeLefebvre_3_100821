@@ -171,6 +171,7 @@ main {
 }
 
 .card__info {
+  color: black;
   padding: 0 25px;
   display: flex;
   align-items: center;
