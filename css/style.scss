@@ -3,10 +3,16 @@
     src: url(fonts/roboto/Roboto-Medium.ttf);
 }
 
+@font-face {
+    font-family: Shrikhand;
+    src: url(/fonts/Shrikhand-Regular.ttf);
+}
+
 $grey: #353535;
 $bg_color: #F6F6F6;
 $ohmyfood_purple: #9356dc;
 $ohmyfood_green: #99e2d0;
+$shadow: 0 5px 0.7rem rgba($color: #3b3b3b, $alpha: 0.3);
 
 @mixin flexCenter {
     display: flex;
@@ -23,18 +29,19 @@ $ohmyfood_green: #99e2d0;
     border-radius: 50px;
     font-size: 15px;
     font-family: roboto;
-    box-shadow: 0 5px 0.7rem rgba($color: #000000, $alpha: 0.3);
+    box-shadow: $shadow;
 }
 
 body {
     margin: 0;
+    font-family: roboto;
 }
 
 header {
     @include flexCenter;
     position: relative;
     padding: 20px 0px;
-    box-shadow: 0 0 0.5rem rgba($color: #000000, $alpha: 0.3);
+    box-shadow: $shadow;
 }
 
 main {
@@ -78,6 +85,7 @@ main {
     flex-wrap: wrap;
     width: 90%;
     max-width: 1440px;
+    padding-bottom: 50px;
     & h2 {
         align-self: flex-start;
         width: 100%;
@@ -85,6 +93,7 @@ main {
 }
 
 .step {
+    box-shadow: $shadow;
     position: relative;
     display: flex;
     align-items: center;
@@ -114,10 +123,8 @@ main {
     flex-direction: column;
     background: $bg_color;  
     width: 100%;
-    & h2 {
-        grid-column: 1 / -1;
-        align-self: flex-start;
-    }
+    padding-bottom: 50px;
+    
 }
 
 .list {
@@ -127,25 +134,66 @@ main {
     grid-template-columns: 1fr 1fr;
     row-gap: 2rem;
     column-gap: 2rem;
+    & h2 {
+        grid-column: 1 / -1;
+        align-self: flex-start;
+    }
 }
 
 .card {
+    border-radius: 15px;
+    box-shadow: $shadow;
     height: 300px;
     width: 100%;
     &__new {
         align-self: flex-end;
-        position: relative;
+        float: top;
+        position: absolute;
         top: 35px;
-        right: -.75rem;
         background: $ohmyfood_green;
         color: #0C8E6F;
         padding: 5px;
         border-radius: 5px;
-
     }
     & img {
+        align-self: flex-start;
+        border-radius: 15px 15px 0 0;
         width: 100%;
         height: 70%;
         object-fit: cover;
+    }
+    &__info {
+        padding: 0 25px;
+        @include flexCenter;
+        justify-content: space-between;
+        height: 30%;
+        & i {
+            font-size: 25px;
+        }
+        & i:hover {
+            background: $ohmyfood_purple;
+        }
+    }
+}
+
+footer {
+    color: white;
+    background: #353535;
+    padding: 25px;
+    & span {
+        font-family: Shrikhand;
+        font-size: 20px;
+    }
+    & ul {
+        list-style: none;
+        padding: 0;
+        & a {
+            color: white;
+            display: inline-block;
+            margin-bottom: 10px;
+            & i {
+                margin-right: 10px;
+            }
+        }
     }
 }
