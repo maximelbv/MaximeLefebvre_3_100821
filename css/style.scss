@@ -46,6 +46,13 @@ header {
     box-shadow: $shadow;
 }
 
+.return_home_icon {
+    color: black;
+    font-size: larger;
+    position: absolute;
+    left: 2rem;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -54,6 +61,7 @@ main {
 
 button {
     @include button;
+    cursor: pointer;
 }
 
 .location {
@@ -209,11 +217,9 @@ footer {
 }
 
 .menu {
-    @include flexCenter;
-    flex-wrap: wrap;
     width: 100%;
     max-width: 1440px;
-    position: relative;
+    // position: relative;
     margin-top: -4rem;
     background: $bg_color;
     border-radius: 50px 50px 0 0;
@@ -221,35 +227,45 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 10px 50px;
-        width: 100%;
+        padding: 1vw 3vw;
         font-size: 18px;
         font-family: Shrikhand;
     }
     &__button {
         @include flexCenter;
-        width: 100%;
         padding: 50px;
     }
+    
+}
+
+.sub {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     &__submenu {
+        overflow: hidden;
         &__title {
             text-transform: uppercase;
+            margin-left: 25px;
         }
     }
 }
 
 .meal {
+    box-shadow: $shadow;
+    border-radius: 10px;
     display: flex;
     justify-content: space-between;
-    padding: 25px;
-    width: 80%;
-    max-width: 350px;
+    padding: 20px 25px;
+    margin: 25px;
+    max-width: 100%;
     background: white;
-    // &__name {
-    //     font-size: 15px;
-    //     align-self: flex-start;
-    // }
-    // &__price {
-    //     justify-self: ;
-    // }
+    &__name {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    &__price {
+        align-self: flex-end;
+        font-weight: 500;
+    }
 }

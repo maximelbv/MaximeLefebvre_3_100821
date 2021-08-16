@@ -22,6 +22,13 @@ header {
   box-shadow: 0 5px 0.7rem rgba(59, 59, 59, 0.3);
 }
 
+.return_home_icon {
+  color: black;
+  font-size: larger;
+  position: absolute;
+  left: 2rem;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -38,6 +45,7 @@ button {
   font-size: 15px;
   font-family: roboto;
   box-shadow: 0 5px 0.7rem rgba(59, 59, 59, 0.3);
+  cursor: pointer;
 }
 
 .location {
@@ -221,13 +229,8 @@ footer ul a i {
 }
 
 .menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
   width: 100%;
   max-width: 1440px;
-  position: relative;
   margin-top: -4rem;
   background: #F6F6F6;
   border-radius: 50px 50px 0 0;
@@ -237,8 +240,7 @@ footer ul a i {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 50px;
-  width: 100%;
+  padding: 1vw 3vw;
   font-size: 18px;
   font-family: Shrikhand;
 }
@@ -247,19 +249,41 @@ footer ul a i {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   padding: 50px;
 }
 
-.menu__submenu__title {
+.sub {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sub__submenu {
+  overflow: hidden;
+}
+
+.sub__submenu__title {
   text-transform: uppercase;
+  margin-left: 25px;
 }
 
 .meal {
+  box-shadow: 0 5px 0.7rem rgba(59, 59, 59, 0.3);
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
-  padding: 25px;
-  width: 80%;
-  max-width: 350px;
+  padding: 20px 25px;
+  margin: 25px;
+  max-width: 100%;
   background: white;
+}
+
+.meal__name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.meal__price {
+  align-self: flex-end;
+  font-weight: 500;
 }

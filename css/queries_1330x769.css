@@ -1,0 +1,5 @@
+@media screen and (max-width: 1330px) {
+  .sub {
+    grid-template-columns: 1fr;
+  }
+}
