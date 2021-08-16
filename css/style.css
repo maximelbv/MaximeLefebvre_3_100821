@@ -216,7 +216,7 @@ footer ul a i {
 
 .r_image {
   width: 100%;
-  height: 30vw;
+  max-height: 32rem;
   object-fit: cover;
 }
 
@@ -228,8 +228,7 @@ footer ul a i {
   width: 100%;
   max-width: 1440px;
   position: relative;
-  top: -50px;
-  bottom: 50px;
+  margin-top: -4rem;
   background: #F6F6F6;
   border-radius: 50px 50px 0 0;
 }
@@ -240,6 +239,8 @@ footer ul a i {
   justify-content: space-between;
   padding: 10px 50px;
   width: 100%;
+  font-size: 18px;
+  font-family: Shrikhand;
 }
 
 .menu__button {
@@ -250,11 +251,15 @@ footer ul a i {
   padding: 50px;
 }
 
+.menu__submenu__title {
+  text-transform: uppercase;
+}
+
 .meal {
   display: flex;
   justify-content: space-between;
   padding: 25px;
   width: 80%;
-  max-width: 400px;
+  max-width: 350px;
   background: white;
 }
