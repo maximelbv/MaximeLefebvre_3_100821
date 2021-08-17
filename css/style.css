@@ -86,16 +86,23 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   width: 90%;
   max-width: 1440px;
-  padding-bottom: 50px;
 }
 
 .functioning__title {
   align-self: flex-start;
+  max-width: 100%;
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
   width: 100%;
+  padding-bottom: 50px;
 }
 
 .step {
@@ -104,7 +111,7 @@ button {
   display: flex;
   align-items: center;
   background: #F6F6F6;
-  width: 90%;
+  width: 100%;
   max-width: 400px;
   border-radius: 15px;
   margin: 10px;
@@ -153,6 +160,7 @@ button {
 }
 
 .card {
+  position: relative;
   border-radius: 15px;
   box-shadow: 0 5px 0.7rem rgba(59, 59, 59, 0.3);
   height: 300px;
@@ -160,10 +168,9 @@ button {
 }
 
 .card__new {
-  align-self: flex-end;
-  float: top;
   position: absolute;
-  top: 35px;
+  top: 15px;
+  right: 15px;
   background: #99e2d0;
   color: #0C8E6F;
   padding: 5px;
@@ -240,9 +247,13 @@ footer ul a i {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1vw 3vw;
+  padding: 10px 30px;
   font-size: 18px;
   font-family: Shrikhand;
+}
+
+.menu__title i {
+  font-size: 30px;
 }
 
 .menu__button {
@@ -262,8 +273,19 @@ footer ul a i {
 }
 
 .sub__submenu__title {
+  display: flex;
+  flex-direction: column;
   text-transform: uppercase;
   margin-left: 25px;
+}
+
+.sub__submenu__title::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background-color: #99e2d0;
+  position: relative;
+  top: 4px;
 }
 
 .meal {

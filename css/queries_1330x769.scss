@@ -2,4 +2,7 @@
     .sub {
         grid-template-columns: 1fr;
     }
+    .steps {
+        flex-direction: column;
+    }
 }

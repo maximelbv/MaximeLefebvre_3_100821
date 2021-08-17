@@ -1,3 +1,9 @@
+$grey: #353535;
+$bg_color: #F6F6F6;
+$ohmyfood_purple: #9356dc;
+$ohmyfood_green: #99e2d0;
+$shadow: 0 5px 0.7rem rgba($color: #3b3b3b, $alpha: 0.3);
+
 @font-face {
     font-family: roboto;
     src: url(fonts/roboto/Roboto-Medium.ttf);
@@ -7,12 +13,6 @@
     font-family: Shrikhand;
     src: url(/fonts/Shrikhand-Regular.ttf);
 }
-
-$grey: #353535;
-$bg_color: #F6F6F6;
-$ohmyfood_purple: #9356dc;
-$ohmyfood_green: #99e2d0;
-$shadow: 0 5px 0.7rem rgba($color: #3b3b3b, $alpha: 0.3);
 
 @mixin flexCenter {
     display: flex;
@@ -92,15 +92,21 @@ button {
 
 .functioning {
     @include flexCenter;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     width: 90%;
     max-width: 1440px;
-    padding-bottom: 50px;
     &__title {
         align-self: flex-start;
-        width: 100%;
+        max-width: 100%;
     }
+}
+
+.steps {
+    @include flexCenter;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 50px;
+    
 }
 
 .step {
@@ -109,7 +115,7 @@ button {
     display: flex;
     align-items: center;
     background: $bg_color;
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     border-radius: 15px;
     margin: 10px;
@@ -152,15 +158,15 @@ button {
 }
 
 .card {
+    position: relative;
     border-radius: 15px;
     box-shadow: $shadow;
     height: 300px;
     width: 100%;
     &__new {
-        align-self: flex-end;
-        float: top;
         position: absolute;
-        top: 35px;
+        top: 15px;
+        right: 15px;
         background: $ohmyfood_green;
         color: #0C8E6F;
         padding: 5px;
@@ -227,9 +233,12 @@ footer {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 1vw 3vw;
+        padding: 10px 30px;
         font-size: 18px;
         font-family: Shrikhand;
+        & i {
+            font-size: 30px;
+        }
     }
     &__button {
         @include flexCenter;
@@ -244,8 +253,18 @@ footer {
     &__submenu {
         overflow: hidden;
         &__title {
+            display: flex;
+            flex-direction: column;
             text-transform: uppercase;
             margin-left: 25px;
+            &::after {
+                content: "";
+                width: 50px;
+                height: 4px;
+                background-color: #99e2d0;
+                position: relative;
+                top: 4px;
+            }
         }
     }
 }
