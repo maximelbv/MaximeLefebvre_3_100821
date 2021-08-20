@@ -60,7 +60,22 @@ main {
 button {
     @include button;
     cursor: pointer;
+    &:hover {
+        animation: shadow-drop-2-center 200ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
 }
+    @keyframes shadow-drop-2-center {
+        0% {
+          transform: translateZ(0);
+          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        }
+        100% {
+          transform: translateZ(50px);
+          box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+        }
+      }
+  
+    
 
 .location {
     width: 100%; 
@@ -188,9 +203,28 @@ button {
         & i {
             font-size: 25px;
         }
-        & i:hover {
-            background: $ohmyfood_purple;
-        }
+    }
+}
+
+.heart_two {
+    background: -webkit-linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    right: 24px;
+    opacity: 0;
+    &:hover {
+        animation: heart_two 250ms forwards linear;
+    }
+}
+
+@keyframes heart_two {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        font-size: 27px;
     }
 }
 
