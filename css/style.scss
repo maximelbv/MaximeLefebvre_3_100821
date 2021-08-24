@@ -32,6 +32,39 @@ $shadow: 0 5px 0.7rem rgba($color: #3b3b3b, $alpha: 0.3);
     box-shadow: $shadow;
 }
 
+@keyframes shadow-drop-2-center {
+    0% {
+        transform: translateZ(0);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        transform: translateZ(50px);
+        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+@keyframes heart_two {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes confirmation {
+    0% {
+        width: 80px;
+        margin-right: -80px;
+    }
+    100% {
+        width: 80px;
+        margin-right: -25px;
+        visibility: visible;
+    }
+}
+
 body {
     margin: 0;
     font-family: roboto;
@@ -64,19 +97,7 @@ button {
         animation: shadow-drop-2-center 200ms cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
 }
-    @keyframes shadow-drop-2-center {
-        0% {
-          transform: translateZ(0);
-          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-        }
-        100% {
-          transform: translateZ(50px);
-          box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
-        }
-      }
   
-    
-
 .location {
     width: 100%; 
     & a {
@@ -211,21 +232,15 @@ button {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
-    right: 24px;
+    right: 25px;
     opacity: 0;
     &:hover {
         animation: heart_two 250ms forwards linear;
     }
 }
 
-@keyframes heart_two {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-        font-size: 27px;
-    }
+.ht {
+    right: 30px;
 }
 
 footer { 
@@ -270,6 +285,7 @@ footer {
     background: $bg_color;
     border-radius: 50px 50px 0 0;
     &__title {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -315,42 +331,33 @@ footer {
     box-shadow: $shadow;
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
+    // justify-content: flex-end;
     padding: 20px 25px;
     margin: 25px;
     max-width: 100%;
     background: white;
     &__name {
+        width: 100%;
         justify-self: flex-start;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
     }
     &__price {
+        padding: 0 20px;
         justify-self: flex-end;
         align-self: flex-end;
         font-weight: 500;
     }
     &__confirmation {
         visibility: hidden;
-        margin: -20px;
-        margin-right: -6rem;
-        height: 78px;
-        width: 78px;
+        margin: -20px 0;
+        height: 80px;
+        width: 0px;
         background: #99E2D0;
     }
     &:hover > .meal__confirmation {
         animation: confirmation 400ms forwards ease-in-out;
     }
 
-    @keyframes confirmation {
-        0% {
-            margin-right: -5rem;
-            visibility: hidden;
-        }
-        100% {
-            margin-right: -25px;
-            visibility: visible;
-        }
-    }
 }
