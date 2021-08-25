@@ -326,19 +326,19 @@ footer {
 }
 
 .meal {
+    transform: scale(0);
+    animation: appearence 600ms forwards ease-in-out;
     overflow: hidden;
     position: relative;
     box-shadow: $shadow;
     border-radius: 10px;
     display: flex;
-    // justify-content: flex-end;
     padding: 20px 25px;
     margin: 25px;
     max-width: 100%;
     background: white;
     &__name {
         width: 100%;
-        justify-self: flex-start;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -357,7 +357,26 @@ footer {
         background: #99E2D0;
     }
     &:hover > .meal__confirmation {
-        animation: confirmation 400ms forwards ease-in-out;
+        animation: confirmation 350ms forwards ease-in-out;
     }
+}
 
+.delay-0 { animation-delay: 40ms};
+.delay-1 { animation-delay: 80ms};
+.delay-2 { animation-delay: 120ms};
+.delay-3 { animation-delay: 160ms};
+.delay-4 { animation-delay: 200ms};
+.delay-5 { animation-delay: 240ms};
+.delay-6 { animation-delay: 280ms};
+.delay-7 { animation-delay: 320ms};
+.delay-8 { animation-delay: 360ms};
+.delay-9 { animation-delay: 400ms};
+
+@keyframes appearence {
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
