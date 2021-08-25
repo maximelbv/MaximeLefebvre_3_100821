@@ -41,6 +41,46 @@
   }
 }
 
+@keyframes loading {
+  0% {
+    filter: opacity(1);
+  }
+  99% {
+    filter: opacity(1);
+  }
+  100% {
+    filter: opacity(0);
+  }
+}
+
+@keyframes dots {
+  50% {
+    margin-bottom: 100px;
+  }
+}
+
+.loader {
+  z-index: 1;
+  background: rgba(231, 231, 231, 0.794);
+  animation: loading 2s forwards linear;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader__dot {
+  background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  width: 25px;
+  height: 25px;
+  margin: 25px;
+  border-radius: 100%;
+  animation: dots 1s forwards ease-in-out infinite;
+  animation-delay: 1s;
+}
+
 body {
   margin: 0;
   font-family: roboto;
@@ -391,48 +431,48 @@ footer {
 }
 
 .delay-0 {
-  animation-delay: 40ms;
+  animation-delay: 100ms;
 }
 
 .delay-1 {
-  animation-delay: 80ms;
-}
-
-.delay-2 {
-  animation-delay: 120ms;
-}
-
-.delay-3 {
-  animation-delay: 160ms;
-}
-
-.delay-4 {
   animation-delay: 200ms;
 }
 
+.delay-2 {
+  animation-delay: 300ms;
+}
+
+.delay-3 {
+  animation-delay: 400ms;
+}
+
+.delay-4 {
+  animation-delay: 500ms;
+}
+
 .delay-5 {
-  animation-delay: 240ms;
+  animation-delay: 600ms;
 }
 
 .delay-6 {
-  animation-delay: 280ms;
+  animation-delay: 700ms;
 }
 
 .delay-7 {
-  animation-delay: 320ms;
+  animation-delay: 800ms;
 }
 
 .delay-8 {
-  animation-delay: 360ms;
+  animation-delay: 900ms;
 }
 
 .delay-9 {
-  animation-delay: 400ms;
+  animation-delay: 1000ms;
 }
 
 @keyframes appearence {
   50% {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   100% {
     transform: scale(1);
