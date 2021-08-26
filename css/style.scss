@@ -166,7 +166,7 @@ button {
     @include button;
 }
 
-//   --- INDEX ---------------------------------------------------------------------------------------------------------------------------------
+//   --- 📃 INDEX 📃 ---------------------------------------------------------------------------------------------------------------------------------
 
 // 📦 LOCATION 📦
 
@@ -329,17 +329,21 @@ button {
     right: 30px;
 }
 
+//   --- 📃 RESTAURANT_1 / RESTAURANT_2 / RESTAURANT_3 / RESTAURANT_4 📃 --------------------------------------------------------------------------------
 
-.r_image {
+// 📦 BACKGROUND 📦
+
+.restaurant_bg {
     width: 100%;
     max-height: 32rem;
     object-fit: cover;
 }
 
+// 📦 MENU 📦
+
 .menu {
     width: 100%;
     max-width: 1440px;
-    // position: relative;
     margin-top: -4rem;
     background: $bg_color;
     border-radius: 50px 50px 0 0;
@@ -386,7 +390,7 @@ button {
 
 .meal {
     transform: scale(0);
-    animation: appearence 600ms forwards ease-in-out;
+    animation: apparition 600ms forwards ease-in-out;
     overflow: hidden;
     position: relative;
     box-shadow: $shadow;
@@ -418,20 +422,30 @@ button {
     &:hover > .meal__confirmation {
         animation: confirmation 350ms forwards ease-in-out;
     }
-    @keyframes confirmation {
-        0% {
-            width: 80px;
-            margin-right: -80px;
-        }
-        100% {
-            width: 80px;
-            margin-right: -25px;
-            visibility: visible;
-        }
+}
+
+@keyframes confirmation {    // 🎞️ keyframes of the meal's confirmation when the meal is hovered    
+    0% {
+        width: 80px;
+        margin-right: -80px;
+    }
+    100% {
+        width: 80px;
+        margin-right: -25px;
+        visibility: visible;
     }
 }
 
-// .delay-0 { animation-delay: 50ms};
+@keyframes apparition {    // 🎞️ keyframes of the meal's apparition when the page is loaded
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+// .delay-0 { animation-delay: 50ms};    // 🎞️ delay added to each meal
 // .delay-1 { animation-delay: 100ms};
 // .delay-2 { animation-delay: 150ms};
 // .delay-3 { animation-delay: 200ms};
@@ -442,7 +456,7 @@ button {
 // .delay-8 { animation-delay: 450ms};
 // .delay-9 { animation-delay: 500ms};
 
-.delay-0 { animation-delay: 100ms};
+.delay-0 { animation-delay: 100ms}; 
 .delay-1 { animation-delay: 200ms};
 .delay-2 { animation-delay: 300ms};
 .delay-3 { animation-delay: 400ms};
@@ -453,11 +467,3 @@ button {
 .delay-8 { animation-delay: 900ms};
 .delay-9 { animation-delay: 1000ms};
 
-@keyframes appearence {
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}

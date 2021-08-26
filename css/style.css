@@ -322,7 +322,7 @@ button:hover {
   right: 30px;
 }
 
-.r_image {
+.restaurant_bg {
   width: 100%;
   max-height: 32rem;
   object-fit: cover;
@@ -384,7 +384,7 @@ button:hover {
 
 .meal {
   transform: scale(0);
-  animation: appearence 600ms forwards ease-in-out;
+  animation: apparition 600ms forwards ease-in-out;
   overflow: hidden;
   position: relative;
   box-shadow: 0 5px 0.7rem rgba(59, 59, 59, 0.3);
@@ -434,6 +434,15 @@ button:hover {
   }
 }
 
+@keyframes apparition {
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .delay-0 {
   animation-delay: 100ms;
 }
@@ -472,13 +481,4 @@ button:hover {
 
 .delay-9 {
   animation-delay: 1000ms;
-}
-
-@keyframes appearence {
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
