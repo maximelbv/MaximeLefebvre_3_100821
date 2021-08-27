@@ -282,6 +282,7 @@ button:hover {
 }
 
 .card__info {
+  text-decoration: none;
   color: black;
   padding: 0 25px;
   display: flex;

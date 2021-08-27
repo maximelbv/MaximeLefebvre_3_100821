@@ -1,3 +1,31 @@
+// Les styles du projet OHMYFOOD sont répertoriés dans ce fichier, à l'exception des
+// media queries. Les sélecteurs sont classifiés par importance
+// (variables, sélecteurs communs, ...) puis par ordre d'apparition sémantique. Les 
+// classes et id sont nommés conventionnellement à la méthodologie BEM 
+// (https://www.alticreation.com/blog/bem-pour-le-css/) et de façon cohérente.
+// Vous retrouverez ci dessous l'index du fichier qui répertorie les différentes sections 
+// et sous-sections.
+
+//   SECTION               LIGNE            
+
+//   VARIABLES             30             
+//   FONTS                 38                  
+//   MIXINS                51
+//   LOADER                88
+//   COMMON                130
+//       Body              133
+//       Header            140
+//       Main              156
+//       Footer            164
+//   INDEX (PAGE)          198
+//       Location          200
+//       Hero              213
+//       Functioning       232
+//       Restaurant cards  277
+//   RESTAURANTS (PAGE)    362
+//       Background        364
+//       Menu              372
+
 
 //   --- VARIABLES -----------------------------------------------------------------------------------------------------------------------------
 
@@ -102,14 +130,14 @@ $shadow: 0 5px 11px rgba($color: #3b3b3b, $alpha: 0.3);
 //   --- COMMON --------------------------------------------------------------------------------------------------------------------------------
 
 
-//   --- BODY ---
+//   --- Body ---
 
 .body_index, .body_restaurant {
     margin: 0;
     font-family: roboto;
 }
 
-//   --- HEADER ---
+//   --- Header ---
 
 .header_index, .header_restaurant {
     @include flexCenter;
@@ -125,7 +153,7 @@ $shadow: 0 5px 11px rgba($color: #3b3b3b, $alpha: 0.3);
     left: 32px;
 }
 
-//   --- MAIN ---
+//   --- Main ---
 
 .main_index, .main_restaurant {
     display: flex;
@@ -133,7 +161,7 @@ $shadow: 0 5px 11px rgba($color: #3b3b3b, $alpha: 0.3);
     align-items: center;
 }
 
-//   --- FOOTER ---
+//   --- Footer ---
 
 footer { 
     background: #353535;
@@ -169,7 +197,7 @@ button {
 
 //   --- 📃 INDEX 📃 ---------------------------------------------------------------------------------------------------------------------------------
 
-// 📦 LOCATION 📦
+// 📦 Location 📦
 
 .location {
     width: 100%; 
@@ -182,7 +210,7 @@ button {
     & i {padding: 13px;}
 }
 
-// 📦 HERO 📦
+// 📦 Hero 📦
 
 .hero {
     width: 100%;
@@ -201,7 +229,7 @@ button {
     }
 }
 
-// 📦 FUNCTIONING 📦
+// 📦 Functioning 📦
 
 .functioning {
     @include flexCenter;
@@ -246,7 +274,7 @@ button {
     }
 }
 
-// 📦 RESTAURANT CARDS 📦
+// 📦 Restaurant cards 📦
 
 #restaurants {
     @include flexCenter;
@@ -270,7 +298,7 @@ button {
     }
 }
 
-.card {
+.card {  
     position: relative;
     border-radius: 15px;
     box-shadow: $shadow;
@@ -293,6 +321,7 @@ button {
         object-fit: cover;
     }
     &__info {
+        text-decoration: none;
         color: black;
         padding: 0 25px;
         @include flexCenter;
@@ -332,7 +361,7 @@ button {
 
 //   --- 📃 RESTAURANT_1 / RESTAURANT_2 / RESTAURANT_3 / RESTAURANT_4 📃 --------------------------------------------------------------------------------
 
-// 📦 BACKGROUND 📦
+// 📦 Background 📦
 
 .restaurant_bg {
     width: 100%;
@@ -340,7 +369,7 @@ button {
     object-fit: cover;
 }
 
-// 📦 MENU 📦
+// 📦 Menu 📦
 
 .menu {
     width: 100%;
