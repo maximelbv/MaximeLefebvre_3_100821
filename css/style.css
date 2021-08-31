@@ -412,6 +412,9 @@ button:hover {
 }
 
 .meal__confirmation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   visibility: hidden;
   margin: -20px 0;
   height: 80px;
@@ -423,6 +426,17 @@ button:hover {
   animation: confirmation 350ms forwards ease-in-out;
 }
 
+.meal:hover > .fa-check-circle {
+  animation: confirmation_icon 350ms forwards ease-in-out;
+}
+
+.fa-check-circle {
+  color: white;
+  font-size: 35px;
+  margin: 32px;
+  transform: rotate(180deg);
+}
+
 @keyframes confirmation {
   0% {
     width: 80px;
@@ -432,6 +446,12 @@ button:hover {
     width: 80px;
     margin-right: -25px;
     visibility: visible;
+  }
+}
+
+@keyframes confirmation_icon {
+  100% {
+    transform: rotate(0deg);
   }
 }
 
