@@ -5,26 +5,28 @@
 // (https://www.alticreation.com/blog/bem-pour-le-css/) et de façon cohérente.
 // Vous retrouverez ci dessous l'index du fichier qui répertorie les différentes sections 
 // et sous-sections.
+          
 
-//   SECTION               LIGNE            
+//   VARIABLES                         
+//   FONTS                               
+//   MIXINS               
+//   LOADER               
+//   COMMON                
+//       Body              
+//       Header            
+//       Main              
+//       Footer            
+//   INDEX (PAGE)          
+//       Location          
+//       Hero              
+//       Functioning       
+//       Restaurant cards  
+//   RESTAURANTS (PAGE)    
+//       Background        
+//       Menu             
 
-//   VARIABLES             30             
-//   FONTS                 38                  
-//   MIXINS                51
-//   LOADER                88
-//   COMMON                130
-//       Body              133
-//       Header            140
-//       Main              156
-//       Footer            164
-//   INDEX (PAGE)          198
-//       Location          200
-//       Hero              213
-//       Functioning       232
-//       Restaurant cards  277
-//   RESTAURANTS (PAGE)    362
-//       Background        364
-//       Menu              372
+//   --- IMPORT -----------------------------------------------------------------------------------------------------------------------------
+
 
 
 //   --- VARIABLES -----------------------------------------------------------------------------------------------------------------------------
@@ -37,15 +39,17 @@ $shadow: 0 5px 11px rgba($color: #3b3b3b, $alpha: 0.3);
 
 //   --- FONTS ---------------------------------------------------------------------------------------------------------------------------------
 
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
 @font-face {
     font-family: roboto;
     src: url(fonts/roboto/Roboto-Medium.ttf);
 }
 
-@font-face {
-    font-family: Shrikhand;
-    src: url(fonts/Shrikhand-Regular.ttf);
-}
+// @font-face {
+//     font-family: Shrikhand;
+//     src: url(fonts/Shrikhand-Regular.ttf);
+// }
 
 
 //   --- MIXINS --------------------------------------------------------------------------------------------------------------------------------
@@ -175,7 +179,7 @@ footer {
     color: white;
     padding: 25px;
     & span {
-        font-family: Shrikhand;
+        font-family: 'Shrikhand', cursive;
         font-size: 20px;
     }
     & ul {
@@ -385,7 +389,7 @@ button {
         justify-content: space-between;
         padding: 10px 30px;
         font-size: 18px;
-        font-family: Shrikhand;
+        font-family: 'Shrikhand', cursive;
         & i {
             font-size: 30px;
         }

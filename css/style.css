@@ -1,11 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @font-face {
   font-family: roboto;
   src: url(fonts/roboto/Roboto-Medium.ttf);
-}
-
-@font-face {
-  font-family: Shrikhand;
-  src: url(fonts/Shrikhand-Regular.ttf);
 }
 
 .loader {
@@ -97,7 +93,7 @@ footer {
 }
 
 .footer_container span {
-  font-family: Shrikhand;
+  font-family: 'Shrikhand', cursive;
   font-size: 20px;
 }
 
@@ -348,7 +344,7 @@ button:hover {
   justify-content: space-between;
   padding: 10px 30px;
   font-size: 18px;
-  font-family: Shrikhand;
+  font-family: 'Shrikhand', cursive;
 }
 
 .menu__title i {
