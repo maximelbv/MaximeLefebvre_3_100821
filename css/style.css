@@ -51,6 +51,10 @@
   }
 }
 
+a {
+  text-decoration: none;
+}
+
 .body_index, .body_restaurant {
   margin: 0;
   font-family: roboto;
