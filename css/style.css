@@ -426,7 +426,7 @@ button:hover {
   animation: confirmation 350ms forwards ease-in-out;
 }
 
-.meal:hover > .fa-check-circle {
+.meal:hover .fa-check-circle {
   animation: confirmation_icon 350ms forwards ease-in-out;
 }
 

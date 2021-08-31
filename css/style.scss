@@ -458,7 +458,7 @@ button {
     &:hover > .meal__confirmation {
         animation: confirmation 350ms forwards ease-in-out;
     }
-    &:hover > .fa-check-circle {
+    &:hover .fa-check-circle {
         animation: confirmation_icon 350ms forwards ease-in-out;
     }
 }
