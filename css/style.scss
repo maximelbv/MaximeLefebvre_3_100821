@@ -25,9 +25,6 @@
 //       Background        
 //       Menu             
 
-//   --- IMPORT -----------------------------------------------------------------------------------------------------------------------------
-
-
 
 //   --- VARIABLES -----------------------------------------------------------------------------------------------------------------------------
 
@@ -277,6 +274,20 @@ button {
         color: grey;
         padding: 25px;
     }
+    &:hover {
+        animation: step 400ms forwards ease-in-out;
+    }
+
+    @keyframes step {
+        100% {
+            background: rgba(146, 86, 220, 0.274);
+        }
+    }
+
+    &:hover i {
+        color: $ohmyfood_purple;
+    }
+
 }
 
 // 📦 Restaurant cards 📦
@@ -497,18 +508,7 @@ button {
     }
 }
 
-// .delay-0 { animation-delay: 50ms};    // 🎞️ delay added to each meal
-// .delay-1 { animation-delay: 100ms};
-// .delay-2 { animation-delay: 150ms};
-// .delay-3 { animation-delay: 200ms};
-// .delay-4 { animation-delay: 250ms};
-// .delay-5 { animation-delay: 300ms};
-// .delay-6 { animation-delay: 350ms};
-// .delay-7 { animation-delay: 400ms};
-// .delay-8 { animation-delay: 450ms};
-// .delay-9 { animation-delay: 500ms};
-
-.delay-0 { animation-delay: 100ms}; 
+.delay-0 { animation-delay: 100ms};      // 🎞️ delay added to each meal
 .delay-1 { animation-delay: 200ms};
 .delay-2 { animation-delay: 300ms};
 .delay-3 { animation-delay: 400ms};
@@ -518,4 +518,3 @@ button {
 .delay-7 { animation-delay: 800ms};
 .delay-8 { animation-delay: 900ms};
 .delay-9 { animation-delay: 1000ms};
-

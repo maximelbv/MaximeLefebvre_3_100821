@@ -231,6 +231,20 @@ button:hover {
   padding: 25px;
 }
 
+.step:hover {
+  animation: step 400ms forwards ease-in-out;
+}
+
+@keyframes step {
+  100% {
+    background: rgba(146, 86, 220, 0.274);
+  }
+}
+
+.step:hover i {
+  color: #9356dc;
+}
+
 #restaurants {
   display: flex;
   align-items: center;
