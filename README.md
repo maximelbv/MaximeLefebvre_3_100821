@@ -1,4 +1,4 @@
-# OHMYFOOD
+![image](https://user-images.githubusercontent.com/58565963/167068433-61936eef-f667-47ed-bd51-9a6e7a1949d9.png)
  
 Troisième projet du parcours développeur web chez OpenClassrooms : "Dynamisez une page web avec des animations CSS"
 
